@@ -1,0 +1,299 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-container-margin-top-bottom: 45px;
+    --main-cards-width: 400px;
+    --main-cards-height: 450px;
+    --main-color-background: #181818;
+    --main-info-color: #ffffff;
+
+    --main-font-family-titles:'DefaultTitles';
+    --main-font-family-paragraphs:'DefaultParagraphs';
+    --numeric-font:'Helvetica';
+    --default-titles-size:27px;
+    --default-paragraphs-size:15px;
+}
+
+@font-face{
+    font-family: 'DefaultTitles';
+    src: url(../fonts/Aquawax\ Black\ Trial.ttf);
+}
+
+@font-face{
+    font-family: 'DefaultSubTitles';
+    src: url(../fonts/Aquawax\ Medium\ Trial.ttf);
+}
+
+@font-face{
+    font-family: 'DefaultParagraphs';
+    src: url(../fonts/Aquawax\ Light\ Trial.ttf);
+}
+
+body{
+    background-color: #181818;
+}
+
+.Ok{
+    text-align:center;
+    color:#45A25B !important;
+    font-size: var(--default-titles-size);
+    font-family: var(--main-font-family-titles);
+    margin-top: 1em;
+}
+
+.Error{
+    text-align:center;
+    color: red !important;
+    font-size: var(--default-titles-size);
+    font-family: var(--main-font-family-titles);
+    margin-top: 1em;
+}
+
+
+.container-contacto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 2em 0 2em 0;
+}
+
+.container-contacto h2{
+    color: var(--main-info-color);
+    font-family: var(--numeric-font);
+    font-size: var(--default-titles-size);
+    margin-bottom: 2em;
+}
+
+.container-contacto form{
+    width: 40vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container-contacto form input{
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #45A25B;
+    padding: .7em;
+    color: var(--main-info-color);
+    font-family: var(--numeric-font);
+    font-size: var(--default-paragraphs-size);
+    outline: none;
+}
+
+.container-contacto form input:nth-child(3){
+    grid-column: 1 / 3;
+}
+
+.container-contacto form label{
+    display: block;
+    color: var(--main-info-color);
+    font-family: var(--numeric-font);
+    font-size: var(--default-paragraphs-size);
+    white-space: nowrap;
+}
+
+.block{
+    display: block;
+    margin: auto;
+    padding: 1em;
+    width: 100%;
+}
+
+.container-contacto form div:nth-child(3){
+    grid-column: 1 / 3;
+}
+
+.container-contacto form div:nth-child(4){
+    grid-column: 1 / 3;
+}
+
+.container-contacto button{
+    display: block;
+    grid-column: 1 / 3;
+    height: 40px;
+    border: none;
+    font-family: var(--numeric-font);
+    font-size: var(--default-paragraphs-size);
+    background-color: #45A25B;
+    color: var(--main-info-color);
+    transition: 0.5s;
+    cursor: pointer;
+    margin-top:2em;
+    outline: none;
+}
+
+.container-contacto button:hover{
+    background-color: #683E62;
+}
+
+.container-contacto textarea{
+    min-width: 100%;
+    max-width: 100%;
+
+    min-height: 200px;
+    max-height: 200px;
+    
+    width: 100%;
+    height: 200px;
+    background-color: #111111;
+    border: none;
+    color: var(--main-info-color);
+    padding: 1em;
+    font-family: var(--numeric-font);
+    font-size: var(--default-paragraphs-size);
+    outline-color: #45A25B;
+}
+
+#title-comentario{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#volver{
+    display: block;
+    margin-bottom: 1em;
+}
+
+#volver img{
+    width: 60px;
+}
+
+
+@media screen and (max-width: 1440px){
+    .container-contacto form{
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    :root{
+
+        --main-color-background: #181818;
+        --main-info-color: #ffffff;
+    
+        --main-font-family-titles:'DefaultTitles';
+        --main-font-family-paragraphs:'DefaultParagraphs';
+        --numeric-font:'Helvetica';
+        --default-titles-size:43px;
+        --default-paragraphs-size:32px;
+    }
+
+    .container-contacto form{
+        width: 70vw;
+    }
+
+    .container-contacto button{
+        height: 90px;
+    }
+
+    .container-contacto form input{
+        border-bottom: 2px solid #45A25B;
+    }
+
+    #volver img{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    :root{
+
+        --main-color-background: #181818;
+        --main-info-color: #ffffff;
+    
+        --main-font-family-titles:'DefaultTitles';
+        --main-font-family-paragraphs:'DefaultParagraphs';
+        --numeric-font:'Helvetica';
+        --default-titles-size:35px;
+        --default-paragraphs-size:22px;
+    }
+
+    .container-contacto button{
+        height: 70px;
+    }
+
+    #volver img{
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    :root{
+
+        --main-color-background: #181818;
+        --main-info-color: #ffffff;
+    
+        --main-font-family-titles:'DefaultTitles';
+        --main-font-family-paragraphs:'DefaultParagraphs';
+        --numeric-font:'Helvetica';
+        --default-titles-size:22px;
+        --default-paragraphs-size:15px;
+    }
+
+    .container-contacto button{
+        height: 40px;
+    }
+
+    .container-contacto form{
+        width: 80vw;
+    }
+
+    #volver img{
+        width: 60px;
+    }
+
+}
+
+@media screen and (max-width: 375px){
+    :root{
+
+        --main-color-background: #181818;
+        --main-info-color: #ffffff;
+    
+        --main-font-family-titles:'DefaultTitles';
+        --main-font-family-paragraphs:'DefaultParagraphs';
+        --numeric-font:'Helvetica';
+        --default-titles-size:22px;
+        --default-paragraphs-size:14px;
+    }
+
+    #volver img{
+        width: 50px;
+    }
+}
+
+
+@media screen and (max-width: 320px){
+    :root{
+
+        --main-color-background: #181818;
+        --main-info-color: #ffffff;
+    
+        --main-font-family-titles:'DefaultTitles';
+        --main-font-family-paragraphs:'DefaultParagraphs';
+        --numeric-font:'Helvetica';
+        --default-titles-size:18px;
+        --default-paragraphs-size:12px;
+    }
+
+    .container-contacto textarea{
+        min-height: 170px;
+        max-height: 170px;
+    }
+
+    #volver img{
+        width: 40px;
+    }
+}

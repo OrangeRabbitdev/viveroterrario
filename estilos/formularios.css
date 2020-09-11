@@ -1,0 +1,350 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-container-margin-top-bottom: 45px;
+    --main-cards-width: 400px;
+    --main-cards-height: 450px;
+    --main-color-background: #181818;
+    --main-info-color: #ffffff;
+
+    --main-font-family-titles:'DefaultTitles';
+    --main-font-family-paragraphs:'DefaultParagraphs';
+    --numeric-font:'Helvetica';
+    --default-titles-size:27px;
+    --default-paragraphs-size:15px;
+}
+
+@font-face{
+    font-family: 'DefaultTitles';
+    src: url(../fonts/Aquawax\ Black\ Trial.ttf);
+}
+
+@font-face{
+    font-family: 'DefaultSubTitles';
+    src: url(../fonts/Aquawax\ Medium\ Trial.ttf);
+}
+
+@font-face{
+    font-family: 'DefaultParagraphs';
+    src: url(../fonts/Aquawax\ Light\ Trial.ttf);
+}
+
+body{
+    background-color:var(--main-color-background);
+  
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.container ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.container ul li{
+    display: block;
+    margin: auto;
+}
+
+.container ul li button{
+    width: 250px;
+    height: 45px;
+    outline: none;
+    border: 1px solid #45A25B;
+    background: none;
+    color: #ffffff;
+}
+
+.Error{
+    text-align:center;
+    color: red;
+    font-size: var(--default-titles-size);
+    font-family: var(--main-font-family-titles);
+    margin-bottom: 2em;
+}
+
+.OkContainer{
+    margin-bottom: 2em;
+}
+
+.Ok{
+    text-align:center;
+    color:#45A25B;
+    font-size: var(--default-titles-size);
+    font-family: var(--main-font-family-titles);
+}
+
+#volver{
+    margin-top: 1em;
+    display: block;
+    text-align:center;
+    color: var(--main-info-color);
+    font-size: var(--default-titles-size);
+    font-family: var(--main-font-family-titles);
+    text-decoration: none;
+}
+
+#Enviar{
+    border: none !important;
+    background-color: #683E62;
+    display: block;
+    text-align: center;
+    margin: auto;
+    height: 50px;
+    font-size: var(--default-paragraphs-size);
+    font-family: var(--main-font-family-paragraphs);
+    width: 300px;
+    padding: 0 !important;
+    margin-top: 3em;
+}
+
+
+
+#Producto-title{
+    text-align: center;
+    color: #45A25B;
+    font-family: var(--main-font-family-titles);
+    font-size: var(--default-titles-size);
+    padding: 2em;
+}
+
+#info{
+    display: block;
+    margin: auto;
+    color: var(--main-info-color);
+    margin-top: 15px;
+}
+
+.forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+    z-index: 999;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.forms a{
+    display: block;
+    position: relative;
+    top:0;
+    left:0;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/regresar.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.forms a span{
+
+    background-color: rebeccapurple;
+}
+
+
+.Productos-form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    flex-wrap: nowrap;
+    width: 40%;
+    background-color: #111111;
+    padding: 4em;
+}
+
+.Productos-form label{
+    color: var(--main-info-color);
+    font-size: var(--default-paragraphs-size);
+    font-family: var(--default-paragraphs-size);
+}
+
+.Productos-form label, .Productos-form input{
+    padding-top: 2em;
+}
+
+#Imagen{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+}
+
+.upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 15px;
+    width: 200px;
+    height: 50px;
+    background-color: #683E62;
+    padding: 0 !important;
+}
+
+.upload::before{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/upload.png);
+}
+
+#Label-image{
+    text-align: center;
+}
+
+
+#Categoria{
+    display: block;
+    margin: auto;
+    padding-left: 2em;
+    font-family: var(--main-font-family-paragraphs);
+    font-size: var(--default-paragraphs-size);
+    appearance: none;
+    color: var(--main-info-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appareance:none;
+    background:none;
+    outline: none;
+    margin-top: 2em;
+    border-radius: 2em;
+    border: 1px solid #45A25B;
+    width: 250px;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    cursor: pointer;
+}
+
+#Categoria option{
+    background-color: #111111;
+}
+
+.Productos-form input{
+    background:none;
+    border:none;
+    border-bottom: 1px solid #45A25B;
+    outline: none;
+    font-size: var(--default-paragraphs-size);
+    font-family: var(--numeric-font);
+    color:var(--main-info-color);
+    padding: .7em;
+}
+
+@media screen and (max-width: 1024px){
+    .Productos-form{
+        width: 85%;
+    }
+
+    #Categoria{
+        width: 450px;
+    }
+
+    :root{
+        --default-paragraphs-size:28px;
+        --default-titles-size:38px;
+    }
+
+    .upload{
+        width: 300px;
+        height: 100px;
+    }
+
+    #Enviar{
+        width: 400px;
+        height: 100px;
+    }
+    
+    .forms a{
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    :root{
+        --default-titles-size:30px;
+        --default-paragraphs-size:20px;
+    }
+
+    #Enviar{
+        width: 400px;
+        height: 90px;
+    }
+
+    #Categoria{
+        width: 330px;
+    }
+
+
+    .upload{
+        width: 300px;
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    :root{
+        --default-titles-size:20px;
+        --default-paragraphs-size:14px;
+    }
+
+    .Productos-form{
+        padding: 2em;
+    }
+
+
+    #Categoria{
+        width: 250px;
+    }
+
+
+    #Producto-title{
+        padding: 1em;
+    }
+
+    #Enviar{
+        width: 200px;
+        height: 50px;
+    }
+
+    .upload{
+        width: 150px;
+        height: 50px;
+    }
+
+        
+    .forms a{
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+
+@media screen and (max-width: 320px){
+    #Categoria{
+        width: 210px;
+    }
+
+}

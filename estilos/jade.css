@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+
+    --main-color-background: #181818;
+    --main-info-color: #ffffff;
+
+    --main-font-family-titles:'DefaultTitles';
+    --main-font-family-paragraphs:'DefaultParagraphs';
+    --numeric-font:'Helvetica';
+    --default-titles-size:27px;
+    --default-paragraphs-size:15px;
+}
+
+@font-face{
+    font-family: 'DefaultTitles';
+    src: url(../fonts/Aquawax\ Black\ Trial.ttf);
+}
+
+@font-face{
+    font-family: 'DefaultSubTitles';
+    src: url(../fonts/Aquawax\ Medium\ Trial.ttf);
+}
+
+@font-face{
+    font-family: 'DefaultParagraphs';
+    src: url(../fonts/Aquawax\ Light\ Trial.ttf);
+}
+
+body{
+    background-color: #111111;
+}
+
+.container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+}
+
+.container ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    margin-top: 4.5rem;
+}
+
+.container ul li{
+    text-align: center;
+    margin: 1rem;
+}
+
+.container ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    width: 240px;
+    height: 100px;
+    background-color: #45A25B;
+    border-radius: 1em;
+    font-family: var(--main-font-family-paragraphs);
+    font-size: var(--default-paragraphs-size);
+}
+
+.volver{
+    display: block;
+    position: relative;
+    top:0;
+    left:0;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/regresar.png);
+    background-size: cover;
+    background-position: center;    
+    margin: 1rem;
+    position: absolute;
+    z-index: 999;
+}
